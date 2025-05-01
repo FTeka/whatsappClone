@@ -34,7 +34,6 @@ public class Chat {
     @ManyToOne
     @JoinColumn(name = "recipient_id")
     private User recipient;
-
     @OneToMany(mappedBy = "chat")
     @OrderBy("createdDate DESC")
     private List<Message> messages;
