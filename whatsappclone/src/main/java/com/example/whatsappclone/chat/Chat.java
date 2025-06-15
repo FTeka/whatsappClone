@@ -27,7 +27,7 @@ query = "SELECT DISTINCT c FROM Chat C WHERE c.sender.id = :senderId OR c.recipi
 public class Chat {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private long id;
+    private String id;
     @ManyToOne
     @JoinColumn(name = "sender_id")
     private User sender;
