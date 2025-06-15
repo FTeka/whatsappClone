@@ -33,7 +33,7 @@ public class ChatService {
         if(exitingChat.isPresent()){
             return exitingChat.get().getId();
         }
-        //
+        /// // testt
         User sender=userRepository.findByPublicId(senderId)
                 .orElseThrow(()-> new EntityNotFoundException("User with id"+senderId+"not found "));
         User receiver=userRepository.findByPublicId(receiverId)
