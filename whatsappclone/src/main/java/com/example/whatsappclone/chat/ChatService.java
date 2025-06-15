@@ -37,7 +37,7 @@ public class ChatService {
         User sender=userRepository.findByPublicId(senderId)
                 .orElseThrow(()-> new EntityNotFoundException("User with id"+senderId+"not found "));
         User receiver=userRepository.findByPublicId(receiverId)
-                .orElseThrow(()-> new EntityNotFoundException("User with id"+receiverId+"not found"));
+                .orElseThrow(()-> new EntityNotFoundException("User with id"+receiverId+"not found "));
 
          Chat chat = new Chat();
          chat.setSender(sender);
